@@ -12,6 +12,12 @@ pipeline {
                         echo 'Building Sample Maven Project'
                   }
             }
+            
+            stage('Deploy QA') {
+                  steps {
+                        echo "Deploying in QA Area"
+                  }
+                  
             stage('Deploy') {
                   steps {
                         echo "Deploying in Staging Area"
@@ -21,6 +27,8 @@ pipeline {
                   steps {
                         echo "Deploying in Production Area"
                   }
+                  
+                  
             }
       }
 }
